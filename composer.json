@@ -1,6 +1,9 @@
 {
     "name": "languara/laravel",
-    "description": "",
+    "keywords": ["Languara", "Laravel", "Translation", "Localization", "Localize", "Internationalization", "Internationalize", "Translate", "l10n", "i18n"],
+    "homepage": "https://languara.com/localization/laravel",
+    "description": "Languara localization plugin for Laravel 4.x. Easily upload, translate, and synchronize your language content using Languara's Cloud Based Translation Management Platform.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Languara Development Team",
