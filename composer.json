@@ -1,0 +1,23 @@
+{
+    "name": "languara/laravel",
+    "description": "",
+    "authors": [
+        {
+            "name": "Languara Development Team",
+            "email": "support@languara.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Languara\\Laravel\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
