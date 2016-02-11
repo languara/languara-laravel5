@@ -46,12 +46,17 @@ class LaravelServiceProvider extends ServiceProvider {
         {
             return new Commands\LanguaraTranslate;
         });
+		$this->app['languara.connect'] = $this->app->share(function()
+        {
+            return new Commands\LanguaraConnect;
+        });
 
         $this->commands(array(
             'languara.push',
             'languara.pull',
             'languara.register',
             'languara.translate',
+            'languara.connect',
         ));
         
         include __DIR__.'/Config/routes.php';
