@@ -1,5 +1,5 @@
-Languara Plugin for Laravel 4.x
-========================
+
+Languara Plugin for Laravel 5.x
 
 <h3>Install</h3>
 
