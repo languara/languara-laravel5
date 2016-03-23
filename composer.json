@@ -1,5 +1,5 @@
 {
-    "name": "languara/laravel",
+    "name": "languara/laravel5",
     "keywords": ["Languara", "Laravel", "Translation", "Localization", "Localize", "Internationalization", "Internationalize", "Translate", "l10n", "i18n"],
     "homepage": "https://languara.com/localization/laravel",
     "description": "Languara localization plugin for Laravel 5.x. Easily upload, translate, and synchronize your language content using Languara's Cloud Based Translation Management Platform.",
