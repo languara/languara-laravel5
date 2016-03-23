@@ -2,7 +2,7 @@
     "name": "languara/laravel",
     "keywords": ["Languara", "Laravel", "Translation", "Localization", "Localize", "Internationalization", "Internationalize", "Translate", "l10n", "i18n"],
     "homepage": "https://languara.com/localization/laravel",
-    "description": "Languara localization plugin for Laravel 4.x. Easily upload, translate, and synchronize your language content using Languara's Cloud Based Translation Management Platform.",
+    "description": "Languara localization plugin for Laravel 5.x. Easily upload, translate, and synchronize your language content using Languara's Cloud Based Translation Management Platform.",
     "license": "MIT",
     "authors": [
         {
@@ -12,13 +12,12 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
+        "illuminate/support": "~5.0",
         "languara/core": "~1.0"
     },
     "autoload": {
-        "classmap": [],
-        "psr-0": {
-            "Languara\\Laravel\\": "src/"
+        "psr-4": {
+            "Languara\\Laravel\\": ""
         }
     },
     "minimum-stability": "stable"
