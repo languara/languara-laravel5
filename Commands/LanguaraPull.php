@@ -2,6 +2,7 @@
 namespace Languara\Laravel\Commands;
 
 use Illuminate\Console\Command;
+use Languara\Laravel\Wrapper\LanguaraWrapper;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -28,7 +29,7 @@ class LanguaraPull extends Command {
 	 */
 	public function __construct()
 	{
-        $languara = \Languara\Laravel\Wrapper\LanguaraWrapper::get_instance();
+        $languara = LanguaraWrapper::get_instance();
         $this->description = $languara->get_message_text('notice_pull_command_info');
         
 		parent::__construct();
@@ -41,7 +42,7 @@ class LanguaraPull extends Command {
 	 */
 	public function fire()
 	{
-        $languara = \Languara\Laravel\Wrapper\LanguaraWrapper::get_instance();
+        $languara = LanguaraWrapper::get_instance();
         
         echo PHP_EOL;
         $languara->print_message('notice_starting_download', 'SUCCESS');
@@ -54,7 +55,7 @@ class LanguaraPull extends Command {
         catch (\Exception $ex) 
         {
             echo PHP_EOL;
-            ($languara->print_message($ex->getMessage(), 'FAILURE'));
+            $languara->print_message($ex->getMessage(), 'FAILURE');
             echo PHP_EOL;
             return;
         }
@@ -62,30 +63,6 @@ class LanguaraPull extends Command {
         echo PHP_EOL;
         $languara->print_message('success_download_successful', 'SUCCESS');
         echo PHP_EOL . PHP_EOL;
-	}
-
-	/**
-	 * Get the console command arguments.
-	 *
-	 * @return array
-	 */
-	protected function getArguments()
-	{
-		return array(
-//			array('example', InputArgument::REQUIRED, 'An example argument.'),
-		);
-	}
-
-	/**
-	 * Get the console command options.
-	 *
-	 * @return array
-	 */
-	protected function getOptions()
-	{
-		return array(
-//			array('example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null),
-		);
 	}
 
 }

@@ -21,8 +21,8 @@ return array(
         'project_config' => '/Config/languara.php',
         'static_resources' => '/config/static_resources.php',
     ),
-    "origin_site" => "https://languara.dev/",
-    "platform" => "Laravel",
+    "origin_site" => "https://languara.com/",
+    "platform" => "Laravel5",
     "messages" => array(
         // error messages
         'error_language_location' => 'ERROR: Language location is not set correctly, check the config file or download a new config file from Languara and replace the old one!',

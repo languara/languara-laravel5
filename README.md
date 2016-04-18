@@ -7,7 +7,7 @@ Add languara plugin information to your composer.json file:
 
 <pre><code>
 "require": {
-  "languara/laravel": "1.0.*@dev"
+  "languara/laravel": "~1.0"
 }
 </code></pre>
 

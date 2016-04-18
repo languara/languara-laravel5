@@ -2,6 +2,7 @@
 namespace Languara\Laravel\Commands;
 
 use Illuminate\Console\Command;
+use Languara\Laravel\Wrapper\LanguaraWrapper;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -28,7 +29,7 @@ class LanguaraConnect extends Command {
 	 */
 	public function __construct()
 	{
-        $languara = \Languara\Laravel\Wrapper\LanguaraWrapper::get_instance();
+        $languara = LanguaraWrapper::get_instance();
         $this->description = $languara->get_message_text('notice_connect_command_info');
         
 		parent::__construct();
@@ -41,7 +42,7 @@ class LanguaraConnect extends Command {
 	 */
 	public function fire()
 	{        
-        $languara = \Languara\Laravel\Wrapper\LanguaraWrapper::get_instance();
+        $languara = LanguaraWrapper::get_instance();
         
         $private_api_key = $this->argument('private_api_key');
 
@@ -77,7 +78,7 @@ class LanguaraConnect extends Command {
 	 */
 	protected function getArguments()
 	{
-		$languara = \Languara\Laravel\Wrapper\LanguaraWrapper::get_instance();
+		$languara = LanguaraWrapper::get_instance();
 
 		return array(
 			array('private_api_key', InputArgument::OPTIONAL),

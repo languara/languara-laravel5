@@ -2,6 +2,8 @@
 
 namespace Languara\Laravel\Driver;
 
+use Illuminate\Support\Facades\Lang;
+
 class LaravelResourceGroupDriver implements ResourceGroupDriverInterface
 {
     private $language_location = null;
@@ -9,9 +11,9 @@ class LaravelResourceGroupDriver implements ResourceGroupDriverInterface
     
     public function load($resource_group_name, $lang_name = null, $file_path = null)
     {               
-        \Illuminate\Support\Facades\Lang::setLocale($lang_name);
+        Lang::setLocale($lang_name);
         
-        return \Illuminate\Support\Facades\Lang::get($resource_group_name);
+        return Lang::get($resource_group_name);
     }
 
     public function save($resource_group_name, $arr_translations, $lang_name = null, $file_path = null)
@@ -32,9 +34,9 @@ class LaravelResourceGroupDriver implements ResourceGroupDriverInterface
         $this->language_location = $language_location;
     }
     
-    public function set_storage_engine($storage_enginge)
+    public function set_storage_engine($storage_engine)
     {
-        $this->storage_engine = $storage_enginge;
+        $this->storage_engine = $storage_engine;
     }
 
 }
