@@ -9,7 +9,7 @@ class LaravelServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = true;
+    protected $defer = false;
 
     /**
      * Bootstrap the application events.
@@ -59,7 +59,9 @@ class LaravelServiceProvider extends ServiceProvider
             'languara.connect',
         ));
 
-        $this->mergeConfigFrom(__DIR__ . '/Config/languara.php', 'languara');
+        if (is_file(__DIR__ . '/Config/languara.php')) {
+            $this->mergeConfigFrom(__DIR__ . '/Config/languara.php', 'languara');
+        }
         $this->mergeConfigFrom(__DIR__ . '/Config/static_resources.php', 'static_resources');
     }
 

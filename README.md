@@ -3,11 +3,11 @@ Languara Plugin for Laravel 5.x
 
 <h3>Install</h3>
 
-Add languara plugin information to your composer.json file:
+Add Languara plugin information to your composer.json file:
 
 <pre><code>
 "require": {
-  "languara/laravel": "~1.0"
+  "languara/laravel5": "~1.0"
 }
 </code></pre>
 
@@ -17,14 +17,14 @@ Use composer to install this package.
 $ composer update
 </code></pre>
 
-<h3>Register the pakcage</h3>
+<h3>Register the package</h3>
 
 Add the package to the autoload array in app/config/app.php:
 
 <pre><code>
 'providers' => array(
     // .....
-    'Languara\Laravel\LaravelServiceProvider'
+    Languara\Laravel\LaravelServiceProvider::class,
 )
 </pre></code>
 
